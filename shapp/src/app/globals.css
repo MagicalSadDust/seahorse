@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+a:not(:has(> img)) {
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 1.5; 
+  text-decoration: none !important; 
+}
+
+a:not(:has(> img)):after {
+    display: block;
+    position: absolute;
+    left: 50%; 
+    width: 0;
+    height: 2px; 
+    background-color: #ffffff; 
+    content: "";
+    transition: width 0.5s ease-out, left 0.5s ease-out;
+    transform: translateX(-50%);
+}
+
+a:not(:has(> img)):hover:after,
+a:not(:has(> img)):focus:after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
