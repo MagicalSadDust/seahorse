@@ -1,9 +1,12 @@
 import React from 'react';
 const Properties: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Properties!
-    </main>        
+    <main className="relative flex bg-[#1A1A1A] text-white py-0  px-0">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>       
   )
 }
 

@@ -1,8 +1,8 @@
-
+import MainSection from "./_homeMainSection/mainSection";
 const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Home!
+    <main className="relative flex justify-center bg-[#141414] text-white py-0  px-0">
+      <MainSection/>
     </main>
   );
 }
